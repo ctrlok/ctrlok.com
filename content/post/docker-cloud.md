@@ -45,9 +45,9 @@ VOLUME /etc/nginx/conf.d
 
 {{<highlight nginx "style=friendly">}}
 # в основном контексте, чтобы пробросить переменную к воркерам
-env SLACKIN\_PORT\_3000\_TCP\_ADDR;
+env SLACKIN_PORT_3000_TCP_ADDR;
 # в контексте http, чтобы заюзать
-perl\_set $slackin 'sub { return $ENV{"SLACKIN\_PORT\_3000\_TCP\_ADDR"}; }';
+perl_set $slackin 'sub { return $ENV{"SLACKIN_PORT_3000_TCP_ADDR"}; }';
 {{< / highlight >}}
 
 Попробовал внести эти изменения и оказалось что контейнер с nginx, который берёт волюмы с другого контейнера не рестартуется когда тот контейнер меняется и передеплаивается (кстати, сама по себе пауза между сборкой контейнера и его передеплоем может быть больше двух минут).

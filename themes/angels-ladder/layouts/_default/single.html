@@ -10,6 +10,7 @@
         {{ range .Params.tags }}
           #<a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
         {{ end }}
+        <a href="https://github.com/ctrlok/ctrlok.com/edit/master/content/{{ .File.Path }}"> Edit on github</a>
       </div>
     </div>
     <article>
