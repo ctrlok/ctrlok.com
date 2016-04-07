@@ -1,3 +1,11 @@
 baseurl = "https://ctrlok.com"
 languageCode = "ru-RU"
 title = "Блог Всеволода Полякова."
+
+[Params]
+subtitle = "Разные штуки о системном администрировании и DevOps"
+facebook = "https://facebook.com/ctrlok"
+twitter = "https://twitter.com/ctrlok"
+github = "https://github.com/ctrlok"
+showsRSS = true
+analytics = "UA-25900291-3"
