@@ -1,0 +1,22 @@
+namespace: ctrlok
+containers:
+  web:
+    image: ctrlok/ctrlok.com:latest
+  slackin:
+    image: chk1/slackin
+    env:
+      SLACK_ORG: ukrops
+      SLACK_TOKEN: {{.token}}
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+  nginx:
+    image: nginx:alpine
+    volumes_from:
+      - web
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /ssl:/etc/nginx/ssl
+    links:
+      - slackin
