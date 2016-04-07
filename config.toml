@@ -1,6 +1,7 @@
 baseurl = "https://ctrlok.com"
 languageCode = "ru-RU"
 title = "Блог Всеволода Полякова."
+disqusShortname = "adminyou"
 
 [Params]
 subtitle = "Разные штуки о системном администрировании и DevOps"
