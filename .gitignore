@@ -1,3 +1,5 @@
+
 ssl/
 .Ulysses-favorites.plist
 .Ulysses-Group.plist
+.DS_Store
